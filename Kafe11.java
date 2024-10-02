@@ -34,6 +34,9 @@ public class Kafe11 {
             case "coklat":
                 hargaMenu = 20000;
                 break;
+            default:
+                System.out.println("Menu tidak tersedia");
+                return; // Menghentikan program jika menu tidak tersedia
         }
         double totalHarga = hargaMenu * jumlah;
 
@@ -46,6 +49,9 @@ public class Kafe11 {
             case 'L':
                 totalHarga += 0.4 *totalHarga;
                 break;
+            default:
+                System.out.println("Ukuran cup yang dipilih tidak tersedia");
+                return; // Menghentikan program jika ukuran cup tidak valid
         }
         double diskon = keanggotaan ? 0 : 0.1;
         double nominalBayar = totalHarga - (diskon * totalHarga);
